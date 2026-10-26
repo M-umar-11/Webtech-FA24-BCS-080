@@ -246,3 +246,14 @@ body {
         padding: 8px 4px;
     }
 }
+
+/* Center product cards under each heading */
+.products-section .row {
+    justify-content: center;
+}
+
+/* Keep product cards looking consistent */
+.product-card {
+    height: 100%;
+    text-align: left;
+}
