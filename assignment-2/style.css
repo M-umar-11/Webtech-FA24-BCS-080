@@ -1,0 +1,169 @@
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Announcement bar */
+.announcement-bar {
+    background-color: #111;
+    color: white;
+    padding: 9px 10px;
+    font-size: 13px;
+}
+
+/* Website name */
+.navbar-brand {
+    font-size: 27px;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #777;
+}
+
+/* Cart link */
+.cart-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 4px 0;
+    }
+
+    .cart-link {
+        display: inline-block;
+        padding: 8px 0;
+    }
+}
+
+
+/* Hero section */
+.hero-section {
+    background-color: #e9e9e9;
+    padding: 100px 0;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #555;
+}
+
+.shop-btn {
+    background-color: #111;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 0;
+    margin-top: 12px;
+}
+
+.shop-btn:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* Category section */
+.section-heading {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.category-card {
+    display: block;
+    color: #111;
+    text-decoration: none;
+    text-align: center;
+}
+
+.category-image {
+    height: 220px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.category-tshirts {
+    background-image: url("https://placehold.co/500x600?text=T-Shirts");
+}
+
+.category-shirts {
+    background-image: url("https://placehold.co/500x600?text=Shirts");
+}
+
+.category-shoes {
+    background-image: url("https://placehold.co/500x600?text=Footwear");
+}
+
+.category-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.category-card {
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .hero-section {
+        padding: 65px 0;
+        min-height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .category-image {
+        height: 170px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+    }
+}
