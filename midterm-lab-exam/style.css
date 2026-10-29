@@ -404,3 +404,101 @@ body {
 .footer-bottom p {
     margin-bottom: 0;
 }
+
+
+
+/* Mega-menu */
+.mega-menu-item {
+    position: static;
+}
+
+.mega-menu-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+}
+
+/* Open on hover or keyboard focus */
+.mega-menu-item:hover .mega-menu-panel,
+.mega-menu-item:focus-within .mega-menu-panel {
+    display: grid;
+}
+
+.mega-menu-column h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.mega-menu-column ul,
+.mega-menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu-column li {
+    margin-bottom: 12px;
+}
+
+.mega-menu-column a,
+.mega-menu-mobile a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mega-menu-column a:hover,
+.mega-menu-mobile a:hover {
+    color: hsl(200, 70%, 45%);
+    text-decoration: underline;
+}
+
+/* Mobile accordion */
+.mega-menu-mobile {
+    display: none;
+}
+
+/* Student breakpoint: 680px */
+@media (max-width: 679px) {
+    .mega-menu-panel {
+        display: none !important;
+    }
+
+    .mega-menu-item:hover .mega-menu-panel,
+    .mega-menu-item:focus-within .mega-menu-panel {
+        display: none !important;
+    }
+
+    .mega-menu-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .mega-menu-mobile details {
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mega-menu-mobile summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .mega-menu-mobile ul {
+        padding: 10px 0 0 16px;
+    }
+
+    .mega-menu-mobile li {
+        padding: 6px 0;
+    }
+}
