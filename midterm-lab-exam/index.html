@@ -172,11 +172,18 @@
 
                 </ul>
 
-                <!-- Cart -->
-                <a class="cart-link" href="checkout.html"
-                   aria-label="Shopping cart">
-                    🛒 BAG
-                </a>
+                
+                <button class="cart-link" id="cart-toggle" type="button"
+                        aria-label="Shopping cart">
+                    🛒 BAG <span id="cart-count">0</span>
+                </button>
+                <div class="mini-cart" id="mini-cart" hidden>
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p>Total: <strong id="cart-total">Rs. 0</strong></p>
+                    <a href="checkout.html">Checkout</a>
+                </div>
+
             </div>
 
         </div>
@@ -374,5 +381,6 @@
     </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

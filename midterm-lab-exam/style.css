@@ -632,3 +632,102 @@ body {
     }
 }
 
+
+/* Cart button */
+.cart-link {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Mini-cart panel */
+.mini-cart {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    max-width: 95vw;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+}
+
+.mini-cart h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+#cart-items button {
+    padding: 5px 8px;
+    border: 1px solid #111;
+    background: white;
+    cursor: pointer;
+}
+
+#cart-items button:hover {
+    background: #111;
+    color: white;
+}
+
+.mini-cart p {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.mini-cart > a {
+    display: block;
+    padding: 10px;
+    background: #111;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mini-cart > a:hover {
+    background: #444;
+}
+
+/* Fix mini-cart visibility and position */
+#mini-cart[hidden] {
+    display: none !important;
+}
+
+#mini-cart:not([hidden]) {
+    display: block;
+}
+
+.main-navbar {
+    position: relative;
+}
+
+.mini-cart {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    max-width: 95vw;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+}
