@@ -1,0 +1,200 @@
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 5%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a,
+.cart {
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.cart:hover {
+    color: #777;
+}
+
+.cart {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Hide checkbox and hamburger on desktop */
+#menu-toggle,
+.hamburger {
+    display: none;
+}
+
+/* Page heading */
+.page-heading {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.page-heading h1 {
+    margin-bottom: 10px;
+}
+
+.page-heading p,
+.product-info p {
+    color: #666;
+}
+
+/* Product grid: 4 columns on desktop */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 5% 45px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info h2 {
+    font-size: 19px;
+}
+
+.price {
+    font-weight: bold;
+    color: #222 !important;
+}
+
+.button {
+    display: block;
+    background: #222;
+    color: white;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: #444;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* Phone: 1 column + CSS-only hamburger */
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 3px;
+        background: #222;
+        border-radius: 2px;
+    }
+
+    .cart {
+        order: 3;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        order: 4;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 0;
+        border-top: 1px solid #eee;
+    }
+
+    /* Checkbox checked = show navigation */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5% 30px;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+}
