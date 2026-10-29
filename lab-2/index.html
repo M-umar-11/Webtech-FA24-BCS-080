@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Responsive Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#home" class="logo">ShopEasy</a>
+
+        <!-- CSS-only hamburger menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger"
+               aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#cart" class="cart">🛒 Cart</a>
+    </header>
+
+    <!-- Heading -->
+    <header id="home" class="page-heading">
+        <h1>Our Products</h1>
+        <p>Discover our latest products at great prices.</p>
+    </header>
+
+    <!-- Product Grid -->
+    <main id="products" class="product-grid">
+
+        <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                 alt="Wireless headphones">
+            <div class="product-info">
+                <h2>Wireless Headphones</h2>
+                <p>Premium sound quality.</p>
+                <p class="price">$49.99</p>
+                <a href="#cart" class="button">Add to Cart</a>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                 alt="Classic wristwatch">
+            <div class="product-info">
+                <h2>Classic Watch</h2>
+                <p>Simple and elegant design.</p>
+                <p class="price">$59.99</p>
+                <a href="#cart" class="button">Add to Cart</a>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                 alt="Red sports shoes">
+            <div class="product-info">
+                <h2>Sports Shoes</h2>
+                <p>Comfort for everyday use.</p>
+                <p class="price">$69.99</p>
+                <a href="#cart" class="button">Add to Cart</a>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                 alt="Fashion handbag">
+            <div class="product-info">
+                <h2>Fashion Bag</h2>
+                <p>A stylish everyday accessory.</p>
+                <p class="price">$39.99</p>
+                <a href="#cart" class="button">Add to Cart</a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer id="about">
+        <p>ShopEasy — Responsive Web Design Lab</p>
+        <p id="contact">Contact: info@shopeasy.example</p>
+    </footer>
+
+</body>
+</html>
