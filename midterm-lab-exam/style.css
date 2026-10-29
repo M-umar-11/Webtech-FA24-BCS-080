@@ -515,3 +515,120 @@ body {
         padding: 8px 4px;
     }
 }
+
+
+
+/* Checkout page */
+.checkout-container {
+    max-width: 1100px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.checkout-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.checkout-fieldset {
+    border: 1px solid #ccc;
+    padding: 24px;
+    min-width: 0;
+}
+
+.checkout-fieldset legend {
+    float: none;
+    width: auto;
+    padding: 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.checkout-field {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.checkout-field label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.checkout-field input,
+.checkout-field select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    background-color: white;
+    font: inherit;
+}
+
+.checkout-field input:focus,
+.checkout-field select:focus {
+    outline: 2px solid hsl(200, 70%, 45%);
+    outline-offset: 1px;
+}
+
+.checkout-field input:user-invalid,
+.checkout-field select:user-invalid {
+    border: 2px solid red;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+.checkout-field input:user-invalid ~ .error-message,
+.checkout-field select:user-invalid ~ .error-message {
+    display: block;
+}
+
+.checkout-submit {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #111;
+    background-color: #111;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.checkout-submit:hover {
+    background-color: #444;
+}
+
+/* At 680px and wider */
+@media (min-width: 680px) {
+    .checkout-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .checkout-submit {
+        grid-column: 1 / -1;
+    }
+
+    .checkout-field {
+        grid-template-columns: 120px minmax(0, 1fr);
+        align-items: center;
+        column-gap: 12px;
+    }
+
+    .checkout-field .error-message {
+        grid-column: 2;
+    }
+}
+
